@@ -1,33 +1,46 @@
 // this is where we'll be writing our javascript code
 
 let humanScore = 0;
-    computerScore = 0;
+let computerScore = 0;
+
+let humanChoice = "";
+let computerChoice = "";
 
 
 let getHumanChoice = () => {
     human = prompt("Choose between Rock, Paper and Scissors");
-    let humanChoice = human.toLowerCase()
+    humanChoice = human.toLowerCase()
+    console.log(humanChoice);
+    return humanChoice;
+}
 
-    switch(humanChoice){
 
-        case "rock":
-            console.log("rock");
-        break;
-
-        case "scissors":
-            console.log("scissors");
-        break;
-
-        case "paper":
-            console.log("paper");
-        break;
+let getComputerChoice = () => {
+    
+    let aleaNumber = (min,max) => {
+        minCeiled = Math.ceil(min);
+        console.log(minCeiled);
         
+        maxFloored = Math.floor(max);
+        console.log(maxFloored);
+        
+        return Math.floor(Math.random()*(maxFloored - minCeiled + 1)) + minCeiled;
     }
+
+    let alea = aleaNumber(1,3);
+    let machineChoice;
+
+    switch(alea) {
+        case 1:
+            computerChoice = "rock";
+            break;
+        case 2:
+            computerChoice = "paper";
+            break;
+        case 3:
+            computerChoice = "scissors";
+            break;
+    }
+    return computerChoice;
 }
 
-getHumanChoice();
-
-let playRound = (humanChoice, computerChoice) => {
-    
-    
-}
