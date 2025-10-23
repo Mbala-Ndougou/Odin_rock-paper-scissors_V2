@@ -3,44 +3,62 @@
 let humanScore = 0;
 let computerScore = 0;
 
-let humanChoice = "";
-let computerChoice = "";
-
+// let humanChoice = "";
+// let computerChoice = "";
 
 let getHumanChoice = () => {
-    human = prompt("Choose between Rock, Paper and Scissors");
-    humanChoice = human.toLowerCase()
-    console.log(humanChoice);
-    return humanChoice;
+    let human = prompt("Choose between Rock, Paper and Scissors");
+    let humanChoicer = human.toLowerCase()
+    console.log(humanChoicer);
+    return humanChoicer;
 }
-
+let humanChoice = getHumanChoice();
 
 let getComputerChoice = () => {
+
+    let computerChoicer;
     
     let aleaNumber = (min,max) => {
-        minCeiled = Math.ceil(min);
-        console.log(minCeiled);
+        let minCeiled = Math.ceil(min);
+        // console.log(minCeiled);
         
-        maxFloored = Math.floor(max);
-        console.log(maxFloored);
+        let maxFloored = Math.floor(max);
+        // console.log(maxFloored);
         
         return Math.floor(Math.random()*(maxFloored - minCeiled + 1)) + minCeiled;
     }
 
     let alea = aleaNumber(1,3);
-    let machineChoice;
 
     switch(alea) {
         case 1:
-            computerChoice = "rock";
+            computerChoicer = "rock";
             break;
         case 2:
-            computerChoice = "paper";
+            computerChoicer = "paper";
             break;
         case 3:
-            computerChoice = "scissors";
+            computerChoicer = "scissors";
             break;
     }
-    return computerChoice;
+    console.log(computerChoicer);
+    
+    return computerChoicer;
 }
 
+let computerChoice = getComputerChoice();
+
+let playRound = (humanChoice,computerChoice) => {
+    if(humanChoice === "rock" && computerChoice === "rock" ||
+        humanChoice === "paper" && computerChoice === "paper" ||
+        humanChoice === "scissors" && computerChoice === "scissors") {
+
+        console.log("draw");
+        
+    }else {
+        console.log("there is a winner");
+        
+    }
+}
+
+playRound(humanChoice, computerChoice);
