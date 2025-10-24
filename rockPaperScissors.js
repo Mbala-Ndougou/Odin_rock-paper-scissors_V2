@@ -1,17 +1,11 @@
-// this is where we'll be writing our javascript code
-
-let humanScore = 0;
-let computerScore = 0;
-
-// let humanChoice = "";
-// let computerChoice = "";
 
 let getHumanChoice = () => {
     let human = prompt("Choose between Rock, Paper and Scissors");
     let humanChoicer = human.toLowerCase()
     console.log(humanChoicer);
     return humanChoicer;
-}
+};
+
 let humanChoice = getHumanChoice();
 
 let getComputerChoice = () => {
@@ -44,20 +38,53 @@ let getComputerChoice = () => {
     console.log(computerChoicer);
     
     return computerChoicer;
-}
+};
 
 let computerChoice = getComputerChoice();
 
-let playRound = (humanChoice,computerChoice) => {
-    if(humanChoice === "rock" && computerChoice === "rock" ||
-        humanChoice === "paper" && computerChoice === "paper" ||
-        humanChoice === "scissors" && computerChoice === "scissors") {
+let humanScore = 0;
+let computerScore = 0;
 
-        console.log("draw");
-        
-    }else {
-        console.log("there is a winner");
-        
+
+let playRound = (humanChoice,computerChoice) => {
+    if(humanChoice === "rock") {
+        if(computerChoice === "rock") {
+            console.log('Draw!');
+            
+        }else if(computerChoice === "paper") {
+            console.log('CPU wins');
+            
+        }else if(computerChoice === "scissors") {
+            console.log('Player wins');
+                
+        }
+
+    }else if(humanChoice === "paper") {
+        if(computerChoice === "rock") {
+            console.log('Player wins');
+            
+        }else if(computerChoice === "paper") {
+            console.log('Draw!');
+            
+
+        }else if(computerChoice === "scissors") {
+            console.log('CPU wins');
+               
+        }
+
+    }else if(humanChoice === "scissors") {
+        if(computerChoice === "rock") {
+            console.log('CPU wins');
+            
+        }else if(computerChoice === "paper") {
+            console.log('Player wins');
+            
+        }else if(computerChoice === "scissors") {
+            console.log('Draw!');
+            
+            
+        }
+
     }
 }
 
