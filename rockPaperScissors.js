@@ -52,41 +52,6 @@ let playGame = () => {
 
         }
 
-        // if(humanChoice === "rock") {
-        //     if(computerChoice === "rock"){
-        //         return "Draw!";
-        //     }else if(computerChoice === "paper"){
-        //         return "Computer Wins";
-        //         // computerScore++;
-        //     }else if(computerChoice === "scissors"){
-        //         return "Player Wins!";
-        //         // humanScore++;
-        //     }
-
-        // }else if(humanChoice === "paper") {
-        //     if(computerChoice === "rock"){
-        //         return "Player Wins!";
-        //         // humanScore++;
-        //     }else if(computerChoice === "paper"){
-        //         return "Draw!";
-        //     }else if(computerChoice === "scissors"){
-        //         return "Computer Wins";
-        //         // computerScore++;
-        //     }
-
-        // }else if(humanChoice === 'scissors'){
-        //     if(computerChoice === "rock"){
-        //         return "Computer Wins";
-        //         // computerScore++;
-        //     }else if(computerChoice === "paper"){
-        //         return "Player Wins!";
-        //         // humanScore++;
-        //     }else if(computerChoice === "scissors"){
-        //         return "Draw!";
-        //     }
-
-        // }      
-        
     }
 
 
