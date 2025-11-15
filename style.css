@@ -1,6 +1,18 @@
 .container{
     display: flex;
     flex-direction: column;
+    width: 400px;
+    border: black 1px solid;
+    border-radius: 7px;
+}
+
+.content{
+    margin: 10px auto;
+    align-content: center;
+}
+
+.rps{
+    text-decoration: underline;
 }
 
 .btns{
@@ -16,4 +28,15 @@
 }
 button{
     width: 80%;
+    background-color: white;
+    border: black solid 1px;
+    border-radius: 7px;
+}
+
+.display{
+    width:320px;
+    height: 24px;
+    border: black solid 1px;
+    border-radius: 7px;
+    text-align: center;
 }
