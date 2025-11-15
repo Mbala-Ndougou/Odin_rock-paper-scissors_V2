@@ -1,10 +1,10 @@
 // **** ROCK PAPER SCISSORS ****
 
+let randomIntegerGenerator = (min, max) =>  Math.floor(Math.random()* (max - min + 1)) + min;
 
 
 let getComputerChoice = () => {
 
-    let randomIntegerGenerator = (min, max) =>  Math.floor(Math.random()* (max - min + 1)) + min;
     let compute = randomIntegerGenerator(1,3);
     console.log(compute);
 
