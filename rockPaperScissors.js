@@ -23,41 +23,37 @@ let playerScore = 0,
 let playRound = (humanChoice,computerChoice) => {
 
     let result;
+    display.style.backgroundColor = "white";
+
 
 
     if(humanChoice === computerChoice) {
-        result = 'draw';
-        console.log(computerScore);
-        console.log(playerScore);
+        result = 'Draw';
     
     }else if(humanChoice === "rock" && computerChoice === "paper"||
         humanChoice === "paper" && computerChoice === "scissors"||
         humanChoice === "scissors" && computerChoice === "rock"){
         result = 'computer wins';
         computerScore++;
-        console.log(computerScore);
-        console.log(playerScore);
 
     }else if(humanChoice === "rock" && computerChoice === "scissors"||
         humanChoice === "paper" && computerChoice === "rock"||
         humanChoice === "scissors" && computerChoice === "paper"){
         result = 'player wins';
         playerScore++;
-        console.log(computerScore);
-        console.log(playerScore);
 
     }
-    display.textContent = result;
+    display.textContent = `${result} |   player: ${playerScore} CPU: ${computerScore}`;
 
     if(playerScore >= 5) {
-        console.log("You win!!!");
-        console.log("Let's play another game!");
+        display.style.backgroundColor = "yellow";
+        display.textContent = "You Win! Bravo!...Let's play another game!";
         playerScore = 0;
         computerScore = 0;
         return "You Win! Bravo!";
     }else if(computerScore >= 5) {
-        console.log("You lose.....");
-        console.log("Let's play another game!");
+        display.style.backgroundColor = "pink";
+        display.textContent = "You lose...Let's play another game!";
         playerScore = 0;
         computerScore = 0;
         return "You lose... Try again next time.";
@@ -86,7 +82,6 @@ buttons.forEach((button)=>{
                 break;
         }
         let computerSelection = getComputerChoice();
-        console.log(playerSelection);
         
 
         playRound(playerSelection,computerSelection);        
